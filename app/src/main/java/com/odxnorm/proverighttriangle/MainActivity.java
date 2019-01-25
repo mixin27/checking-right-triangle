@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Created by Zayar Tun(ODxNorm) at 25/1/2019
+ */
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
@@ -43,31 +46,41 @@ public class MainActivity extends AppCompatActivity {
 
         getPoints();
 
+        // AB = [(bx-ax), (by-ay)]
         int[] ab = new int[] {
                 b[0] - a[0],
                 b[1] - a[1]
         };
         Log.d(TAG, "\nAB = [" + ab[0] + ", " + ab[1] + "]");
 
+
+        // BC = [(cx-bx), (cy-by)]
         int[] bc = new int[] {
                 c[0] - b[0],
                 c[1] - b[1]
         };
         Log.d(TAG, "\nBC = [" + bc[0] + ", " + bc[1] + "]");
 
+        // AC = [(cx-ax), (cy-ay)]
         int[] ac = new int[] {
                 c[0] - a[0],
                 c[1] - a[1]
         };
         Log.d(TAG, "\nAC = [" + ac[0] + ", " + ac[1] + "]");
 
+        // AB.BC = [ABx, ABy].[BCx, BCy]
         int abbc = (ab[0] * bc[0]) + (ab[1] * bc[1]);
         Log.d(TAG, "AB.BC = " + abbc);
+
+        // BC.AC = [BCx, BCy].[ACx, ACy]
         int bcac = (bc[0] * ac[0]) + (bc[1] * ac[1]);
         Log.d(TAG, "BC.AC = " + bcac);
+
+        // AB.AC = [ABx, ABy].[ACx, ACy]
         int abac = (ab[0] * ac[0]) + (ab[1] * ac[1]);
         Log.d(TAG, "ABAC = " + abac);
 
+        // Check AB.BC == 0 | BC.AC == 0 | AB.AC == 0
         if(isRightTriangle(abbc, bcac, abac)) {
             Log.d(TAG, "Right Triangle = true");
             tv_status.setText("Status : It is a right triangle.");
@@ -121,6 +134,8 @@ public class MainActivity extends AppCompatActivity {
         ax = strToInt(txt_point_one_x.getText().toString());
         ay = strToInt(txt_point_one_y.getText().toString());
 
+        // set points x and y to A
+        // A = (ax, ay)
         a = new int[] {
                 ax, ay
         };
@@ -129,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
         bx = strToInt(txt_point_two_x.getText().toString());
         by = strToInt(txt_point_two_y.getText().toString());
 
+        // set points x and y to B
+        // B = (bx, by)
         b = new int[] {
                 bx, by
         };
@@ -137,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
         cx = strToInt(txt_point_three_x.getText().toString());
         cy = strToInt(txt_point_three_y.getText().toString());
 
+        // set points x and y to C
+        // C = (cx, cy)
         c = new int[] {
                 cx, cy
         };
