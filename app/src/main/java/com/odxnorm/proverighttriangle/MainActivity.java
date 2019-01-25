@@ -97,42 +97,48 @@ public class MainActivity extends AppCompatActivity {
 
     private void getPoints() {
 
-        int ax, ay;
-        int bx, by;
-        int cx, cy;
+        int ax = 0, ay = 0;
+        int bx = 0, by = 0;
+        int cx = 0, cy = 0;
 
-        if (txt_point_one_x.getText().toString().isEmpty()) {
+        if (!txt_point_one_x.getText().toString().isEmpty()) {
+            ax = strToInt(txt_point_one_x.getText().toString());
+            if (!txt_point_one_y.getText().toString().isEmpty()) {
+                ay = strToInt(txt_point_one_y.getText().toString());
+            } else {
+                txt_point_one_y.requestFocus();
+                txt_point_one_y.setError("Required");
+            }
+        } else {
             txt_point_one_x.requestFocus();
             txt_point_one_x.setError("Required");
         }
 
-        if (txt_point_one_y.getText().toString().isEmpty()) {
-            txt_point_one_y.requestFocus();
-            txt_point_one_y.setError("Required");
-        }
-
-        if (txt_point_two_x.getText().toString().isEmpty()) {
+        if (!txt_point_two_x.getText().toString().isEmpty()) {
+            bx = strToInt(txt_point_two_x.getText().toString());
+            if (!txt_point_two_y.getText().toString().isEmpty()) {
+                by = strToInt(txt_point_two_y.getText().toString());
+            } else {
+                txt_point_two_y.requestFocus();
+                txt_point_two_y.setError("Required");
+            }
+        } else {
             txt_point_two_x.requestFocus();
             txt_point_two_x.setError("Required");
         }
 
-        if (txt_point_two_y.getText().toString().isEmpty()) {
-            txt_point_two_y.requestFocus();
-            txt_point_two_y.setError("Required");
-        }
-
-        if (txt_point_three_x.getText().toString().isEmpty()) {
+        if (!txt_point_three_x.getText().toString().isEmpty()) {
+            cx = strToInt(txt_point_three_x.getText().toString());
+            if (!txt_point_three_y.getText().toString().isEmpty()) {
+                cy = strToInt(txt_point_three_y.getText().toString());
+            } else {
+                txt_point_three_y.requestFocus();
+                txt_point_three_y.setError("Required");
+            }
+        } else {
             txt_point_three_x.requestFocus();
             txt_point_three_x.setError("Required");
         }
-
-        if (txt_point_three_y.getText().toString().isEmpty()) {
-            txt_point_three_y.requestFocus();
-            txt_point_three_y.setError("Required");
-        }
-
-        ax = strToInt(txt_point_one_x.getText().toString());
-        ay = strToInt(txt_point_one_y.getText().toString());
 
         // set points x and y to A
         // A = (ax, ay)
@@ -141,18 +147,12 @@ public class MainActivity extends AppCompatActivity {
         };
         Log.d(TAG, "\nAx = " + ax + "\nAy = " + ay);
 
-        bx = strToInt(txt_point_two_x.getText().toString());
-        by = strToInt(txt_point_two_y.getText().toString());
-
         // set points x and y to B
         // B = (bx, by)
         b = new int[] {
                 bx, by
         };
         Log.d(TAG, "\nBx = " + bx + "\nBy = " + by);
-
-        cx = strToInt(txt_point_three_x.getText().toString());
-        cy = strToInt(txt_point_three_y.getText().toString());
 
         // set points x and y to C
         // C = (cx, cy)
