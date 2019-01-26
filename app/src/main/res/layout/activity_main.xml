@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="X : "
+            android:text="x : "
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/colorAccent"/>
@@ -44,7 +44,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Y : "
+            android:text="y : "
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/colorAccent"/>
@@ -79,7 +79,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="X : "
+            android:text="x : "
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/colorAccent"/>
@@ -95,7 +95,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Y : "
+            android:text="y : "
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/colorAccent"/>
@@ -114,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/layout2"
-        android:text="Point 2"
+        android:text="Point 3"
         android:textSize="22sp"
         android:textColor="#222222"/>
 
@@ -129,7 +129,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="X : "
+            android:text="x : "
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/colorAccent"/>
@@ -145,7 +145,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Y : "
+            android:text="y : "
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/colorAccent"/>
